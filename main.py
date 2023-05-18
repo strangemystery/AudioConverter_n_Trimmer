@@ -7,10 +7,10 @@ root.withdraw()
 
 file_open = filedialog.askopenfilename()
 
-
 if file_open:
     file_name = file_open.split("/")[-1]
-    file_path = "./".join(file_open.split("/")[:-1])
+    file_path = "/".join(file_open.split("/")[:-1])
+    print(file_path)
 
 else:
     raise FileNotFoundError("YOu didn't specify the file")
